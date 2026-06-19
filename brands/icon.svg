@@ -1,0 +1,25 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1024" height="1024" viewBox="0 0 1024 1024">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#7B61FF"/>
+      <stop offset="1" stop-color="#4A20B4"/>
+    </linearGradient>
+    <linearGradient id="spk" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#FFC94F"/>
+      <stop offset="1" stop-color="#FF5630"/>
+    </linearGradient>
+    <filter id="sh" x="-20%" y="-20%" width="140%" height="160%">
+      <feDropShadow dx="0" dy="18" stdDeviation="22" flood-color="#140838" flood-opacity="0.35"/>
+    </filter>
+  </defs>
+  <rect x="0" y="0" width="1024" height="1024" rx="232" fill="url(#bg)"/>
+  <g filter="url(#sh)">
+    <rect x="230" y="250" width="600" height="450" rx="150" fill="#fff"/>
+    <path d="M 350,690 L 312,814 L 486,690 Z" fill="#fff"/>
+  </g>
+  <circle cx="330" cy="470" r="16" fill="#6C4AE8"/>
+  <path d="M 330,420 A 50,50 0 0 1 330,520" fill="none" stroke="#6C4AE8" stroke-width="22" stroke-linecap="round"/>
+  <path d="M 330,378 A 92,92 0 0 1 330,562" fill="none" stroke="#6C4AE8" stroke-width="22" stroke-linecap="round"/>
+  <path d="M 585.0,330.0 L 613.3,441.7 L 725.0,470.0 L 613.3,498.3 L 585.0,610.0 L 556.7,498.3 L 445.0,470.0 L 556.7,441.7 Z" fill="url(#spk)"/>
+  <path d="M 700.0,292.0 L 712.0,338.0 L 758.0,350.0 L 712.0,362.0 L 700.0,408.0 L 688.0,362.0 L 642.0,350.0 L 688.0,338.0 Z" fill="url(#spk)"/>
+</svg>

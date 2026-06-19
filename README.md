@@ -1,5 +1,9 @@
 **🇷🇺 Русский** · [🇬🇧 English](README.en.md)
 
+<p align="center">
+  <img src="brands/icon.png" width="128" alt="Yandex Station Relay AI">
+</p>
+
 # Yandex Station Relay AI (Кузя)
 
 Кастомная интеграция Home Assistant, которая передаёт речь между **умными

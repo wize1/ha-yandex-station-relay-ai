@@ -1,5 +1,9 @@
 [🇷🇺 Русский](README.md) · **🇬🇧 English**
 
+<p align="center">
+  <img src="brands/icon.png" width="128" alt="Yandex Station Relay AI">
+</p>
+
 # Yandex Station Relay AI (Кузя)
 
 A Home Assistant custom integration that relays speech between **Yandex Alice
