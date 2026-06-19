@@ -1,0 +1,70 @@
+ask:
+  name: Ask the AI agent
+  description: >-
+    Relay a phrase to the configured AI backend (the same one Alice uses) and
+    return its reply. Optionally speak the reply on a Yandex Station.
+  fields:
+    text:
+      name: Text
+      description: The prompt to send to the AI agent.
+      required: true
+      example: Расскажи короткий анекдот
+      selector:
+        text:
+          multiline: true
+    speak:
+      name: Speak the reply
+      description: Speak the reply on a Yandex Station via media_player TTS.
+      required: false
+      default: false
+      selector:
+        boolean:
+    target:
+      name: Target station
+      description: >-
+        media_player entity to speak on. Defaults to the station configured in
+        the integration options.
+      required: false
+      example: media_player.yandex_station_kitchen
+      selector:
+        entity:
+          domain: media_player
+    entry_id:
+      name: Relay entry
+      description: >-
+        Which Yandex Station Relay AI entry to use. Defaults to the first configured
+        entry.
+      required: false
+      selector:
+        config_entry:
+          integration: yandex_station_relay_ai
+
+speak:
+  name: Speak text on a station
+  description: >-
+    Speak arbitrary text on a Yandex Station via media_player TTS. No AI call —
+    just text-to-speech.
+  fields:
+    text:
+      name: Text
+      description: The text to speak.
+      required: true
+      example: Ужин готов
+      selector:
+        text:
+          multiline: true
+    target:
+      name: Target station
+      description: media_player entity to speak on.
+      required: false
+      example: media_player.yandex_station_kitchen
+      selector:
+        entity:
+          domain: media_player
+    entry_id:
+      name: Relay entry
+      description: Which Yandex Station Relay AI entry to use.
+      required: false
+      selector:
+        config_entry:
+          integration: yandex_station_relay_ai

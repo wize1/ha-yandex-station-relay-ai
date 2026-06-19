@@ -1,0 +1,13 @@
+{
+  "domain": "yandex_station_relay_ai",
+  "name": "Yandex Station Relay AI",
+  "codeowners": ["@wize1"],
+  "config_flow": true,
+  "dependencies": ["webhook", "conversation"],
+  "documentation": "https://github.com/wize1/ha-yandex-station-relay-ai",
+  "integration_type": "service",
+  "iot_class": "cloud_push",
+  "issue_tracker": "https://github.com/wize1/ha-yandex-station-relay-ai/issues",
+  "requirements": [],
+  "version": "0.1.0"
+}

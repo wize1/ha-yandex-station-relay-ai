@@ -1,0 +1,71 @@
+{
+  "config": {
+    "step": {
+      "user": {
+        "title": "Yandex Station Relay AI",
+        "description": "Bridge a Yandex Dialogs skill to an AI agent. The skill's activation name becomes your trigger word (e.g. «Алиса, попроси Кузю …»).",
+        "data": {
+          "name": "Name",
+          "skill_id": "Skill ID (optional)"
+        },
+        "data_description": {
+          "name": "Friendly name for this relay (and the webhook).",
+          "skill_id": "If set, only requests from this Yandex skill_id are accepted. Find it in the Dialogs console URL or request payload."
+        }
+      },
+      "finish": {
+        "title": "Webhook ready",
+        "description": "Paste this URL into your Yandex Dialogs skill as the webhook (Backend → Webhook URL):\n\n`{url}`\n\nThen set the skill's activation name to your trigger word (e.g. «Кузя»). After saving, open the integration's **Configure** screen to pick the AI backend."
+      }
+    },
+    "abort": {
+      "single_instance_allowed": "Already configured."
+    }
+  },
+  "options": {
+    "step": {
+      "init": {
+        "title": "Relay settings",
+        "description": "Choose the AI backend and tune how Alice replies. Conversation-agent fields and OpenAI-compatible fields are both shown — fill in the ones for your selected backend.",
+        "data": {
+          "backend": "AI backend",
+          "conversation_agent": "Conversation agent ID",
+          "language": "Language",
+          "api_base_url": "API base URL",
+          "api_key": "API key",
+          "model": "Model",
+          "system_prompt": "System prompt",
+          "max_tokens": "Max tokens",
+          "trigger_phrases": "Trigger words to strip",
+          "tts_entity": "Yandex Station (proactive answers)",
+          "first_turn_timeout": "First-reply timeout (seconds)",
+          "backend_timeout": "Backend timeout (seconds)",
+          "greeting": "Greeting",
+          "thinking_phrase": "Thinking phrase",
+          "error_phrase": "Error phrase",
+          "end_session": "End the dialog after each answer"
+        },
+        "data_description": {
+          "conversation_agent": "Conversation backend only. Leave blank for the default Assist agent, or enter an agent_id.",
+          "language": "Conversation backend only. Language passed to the conversation agent (e.g. ru-RU).",
+          "api_base_url": "OpenAI-compatible backend only. e.g. https://api.openai.com/v1 or a local server / OpenRouter.",
+          "api_key": "OpenAI-compatible backend only. Sent as a Bearer token. Leave blank for local servers that need none.",
+          "model": "OpenAI-compatible backend only.",
+          "system_prompt": "OpenAI-compatible backend only. Steer Кузя's persona and keep replies short and speakable.",
+          "trigger_phrases": "Comma/space separated leading words stripped from the recognised phrase (e.g. кузя, кузю). Connector words like «попроси» are always stripped.",
+          "tts_entity": "Optional. When the AI is slower than the ~3s Yandex limit, the full answer is spoken here. Leave empty to instead reply «думаю…» and let the user say «дальше».",
+          "first_turn_timeout": "How long to wait for the AI before falling back to the thinking reply. Keep under ~3s.",
+          "end_session": "If on, Alice closes the dialog after answering (no follow-up turns)."
+        }
+      }
+    }
+  },
+  "selector": {
+    "backend": {
+      "options": {
+        "conversation": "Home Assistant conversation agent",
+        "openai": "OpenAI-compatible / custom endpoint"
+      }
+    }
+  }
+}

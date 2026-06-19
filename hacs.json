@@ -1,0 +1,5 @@
+{
+  "name": "Yandex Station Relay AI",
+  "homeassistant": "2024.12.0",
+  "render_readme": true
+}
