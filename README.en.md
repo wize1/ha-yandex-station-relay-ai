@@ -1,7 +1,7 @@
 [🇷🇺 Русский](README.md) · **🇬🇧 English**
 
 <p align="center">
-  <img src="brands/icon.png" width="128" alt="Yandex Station Relay AI">
+  <img src="https://raw.githubusercontent.com/wize1/ha-yandex-station-relay-ai/main/brands/icon.png" width="128" alt="Yandex Station Relay AI">
 </p>
 
 # Yandex Station Relay AI (Кузя)
